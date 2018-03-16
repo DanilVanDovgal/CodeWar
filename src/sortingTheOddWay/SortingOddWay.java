@@ -5,15 +5,15 @@ import java.util.Comparator;
 import java.util.List;
 
 public class SortingOddWay {
-    static Double[] sortingOddWay(final Double source[]) {
+    static<T extends Number & Comparable<? super T>> Object[] sortingOddWay(final T source[]) {
         if (source.length <= 1) {
             return source;
         }
 
-        List<Double> oddList = new ArrayList<>();
-        List<Double> evenList = new ArrayList<>();
+        List<T> oddList = new ArrayList<>();
+        List<T> evenList = new ArrayList<>();
 
-        for (Double d : source) {
+        for (T d : source) {
             if ((d.intValue() % 2) == 0) {
                 evenList.add(d);
             } else {
@@ -24,8 +24,7 @@ public class SortingOddWay {
         evenList.sort(Comparator.reverseOrder());
         oddList.sort(Comparator.naturalOrder());
         oddList.addAll(evenList);
-        Double result[] = new Double[oddList.size()];
 
-        return oddList.toArray(result);
+        return oddList.toArray();
     }
 }
