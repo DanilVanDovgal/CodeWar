@@ -1,7 +1,5 @@
 package fatFinger;
 
-//test commit to github
-
 class FatFinger {
 
     static String capsLockProblem(String source) {

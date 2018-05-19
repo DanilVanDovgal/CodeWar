@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.TreeSet;
 
-//test comments
-
 public class ArrayCropper {
 
     private static Set<Integer> getZeroSet(int arr[]) {
