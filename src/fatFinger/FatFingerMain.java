@@ -1,7 +1,5 @@
 package fatFinger;
 
-//commit
-
 public class FatFingerMain {
 
     public static void main(String[] args) {
