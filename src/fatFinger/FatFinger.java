@@ -5,9 +5,7 @@ class FatFinger {
     static String capsLockProblem(String source) {
 
         if (source == null) {
-
             return null;
-
         }
 
         StringBuilder sb = new StringBuilder();
@@ -18,17 +16,21 @@ class FatFinger {
 
             if ( charArray[i] == 'a' || charArray[i] == 'A') {
 
-                i++;
+                while (++i < source.length()) {
 
-                while (i < source.length() && (charArray[i] != 'a' || charArray[i] != 'A' )) {
+                    if (charArray[i] == 'a' || charArray[i] == 'A') {
+                        continue;
+                    }
 
-                    sb.append(Character.toUpperCase(charArray[i++]));
+                    sb.append(Character.toUpperCase(charArray[i]));
 
                 }
 
-            }
+            } else {
 
-            sb.append(charArray[i++]);
+                sb.append(charArray[i++]);
+
+            }
 
         }
 
