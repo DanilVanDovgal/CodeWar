@@ -80,5 +80,7 @@ public class ArrayCropper {
 
         System.out.println(System.nanoTime() - start);
         System.out.println(Arrays.deepToString(result));
+
     }
+
 }
