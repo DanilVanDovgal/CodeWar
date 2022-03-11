@@ -177,11 +177,8 @@ public class Armstrong {
 
 
     private static boolean isArmstrongNumber(long N) {
-
         int degree = Long.toString(N).length();
-
         return getArmstrongSum(N, degree) == N;
-
     }
 
 }
